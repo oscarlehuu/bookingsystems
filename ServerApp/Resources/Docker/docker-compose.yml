@@ -1,0 +1,21 @@
+version: '3' 
+
+services: 
+
+  sql_server: 
+
+    image: mcr.microsoft.com/mssql/server:2022-latest 
+
+    environment: 
+
+      - ACCEPT_EULA=Y 
+
+      - SA_PASSWORD=123asd!au
+
+    ports: 
+
+      - "1433:1433" 
+
+    volumes: 
+
+      - /Users/oscar/Desktop/Oscar Projects/Booking Systems/ServerApp/Resources/Docker/DataStored:/var/opt/mssql/data 
