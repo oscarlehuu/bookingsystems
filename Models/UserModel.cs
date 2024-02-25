@@ -3,7 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Model;
 
-public class User {
+namespace Model {
+  public class User {
   public int Id { get; set; }
   public required string Username { get; set; }
   public required string Password { get; set;}
@@ -40,4 +41,5 @@ public class UserConfiguration : IEntityTypeConfiguration<User> {
     builder.Property(x => x.IsActive).IsRequired();
     builder.Property(x => x.IsAdmin).IsRequired();
   }
+}
 }
